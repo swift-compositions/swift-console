@@ -18,18 +18,18 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-foundations/swift-kernel.git", branch: "main"),
+        .package(url: "https://github.com/swift-compositions/swift-kernel.git", branch: "main"),
         .package(url: "https://github.com/swift-ecma/swift-ecma-48.git", branch: "main"),
         .package(
-            url: "https://github.com/swift-primitives/swift-terminal-input-primitives.git",
+            url: "https://github.com/swift-molecules/swift-terminal-input.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-standard-library-extensions.git",
+            url: "https://github.com/swift-molecules/swift-standard-library-extensions.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-byte-primitives.git",
+            url: "https://github.com/swift-molecules/swift-byte.git",
             branch: "main"
         ),
     ],
@@ -50,8 +50,8 @@ let package = Package(
                 ),
                 .product(name: "ECMA 48", package: "swift-ecma-48"),
                 .product(
-                    name: "Terminal Input Primitives",
-                    package: "swift-terminal-input-primitives"
+                    name: "Terminal Input",
+                    package: "swift-terminal-input"
                 ),
                 .product(
                     name: "Standard Library Extensions",
@@ -63,7 +63,7 @@ let package = Package(
             name: "Console Tests",
             dependencies: [
                 "Console",
-                .product(name: "Byte Primitive", package: "swift-byte-primitives"),
+                .product(name: "Byte Primitive", package: "swift-byte"),
             ]
         ),
     ],

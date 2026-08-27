@@ -2,7 +2,7 @@
 
     import Byte_Primitive
     import Standard_Library_Extensions
-    import Terminal_Input_Primitives
+    import Terminal_Input
     import Kernel
 
     import Kernel_Terminal

@@ -68,7 +68,7 @@ Add swift-console to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/swift-foundations/swift-console.git", branch: "main")
+    .package(url: "https://github.com/swift-compositions/swift-console.git", branch: "main")
 ]
 ```
 
