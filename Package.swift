@@ -57,7 +57,7 @@ let package = Package(
             name: "Console Tests",
             dependencies: [
                 "Console",
-                .product(name: "Byte Primitive", package: "swift-byte"),
+                .product(name: "Byte", package: "swift-byte"),
             ]
         ),
     ],

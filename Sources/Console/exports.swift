@@ -5,4 +5,3 @@
 
     @_exported public import Kernel
 #endif
-@_exported public import Terminal

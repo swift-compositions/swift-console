@@ -1,4 +1,4 @@
-internal import Byte_Primitive
+internal import Byte
 import Testing
 
 @testable import Console

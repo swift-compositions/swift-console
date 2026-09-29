@@ -1,8 +1,6 @@
-import Terminal
-
 #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS) || os(visionOS) || os(Linux)
 
-    import Byte_Primitive
+    import Byte
     import Standard_Library_Extensions
     import Terminal
     import Kernel
