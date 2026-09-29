@@ -21,17 +21,14 @@ let package = Package(
         .package(url: "https://github.com/swift-compositions/swift-kernel.git", branch: "main"),
         .package(url: "https://github.com/swift-ecma/swift-ecma-48.git", branch: "main"),
         .package(
-            url: "https://github.com/swift-molecules/swift-terminal-input.git",
-            branch: "main"
-        ),
-        .package(
             url: "https://github.com/swift-atoms/swift-standard-library-extensions.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-byte.git",
+            url: "https://github.com/swift-atoms/swift-byte.git",
             branch: "main"
         ),
+        .package(url: "https://github.com/swift-atoms/swift-terminal.git", branch: "main", traits: ["Error", "Input"]),
     ],
     targets: [
         .target(
@@ -50,13 +47,10 @@ let package = Package(
                 ),
                 .product(name: "ECMA 48", package: "swift-ecma-48"),
                 .product(
-                    name: "Terminal Input",
-                    package: "swift-terminal-input"
-                ),
-                .product(
                     name: "Standard Library Extensions",
                     package: "swift-standard-library-extensions"
                 ),
+                .product(name: "Terminal", package: "swift-terminal"),
             ]
         ),
         .testTarget(
