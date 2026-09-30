@@ -73,13 +73,12 @@
             while true {
 
                 if !parseBuffer.isEmpty {
-                    var input = Input.Buffer(parseBuffer)
+                    var input = parseBuffer[...]
 
                     do throws(Terminal.Input.Parser.Error) {
                         let event = try Terminal.Input.Parser.parse(&input)
 
-                        let consumed = Int(bitPattern: input.consumed)
-                        parseBuffer.removeFirst(consumed)
+                        parseBuffer.removeFirst(parseBuffer.count - input.count)
                         return event
                     } catch Terminal.Input.Parser.Error.incompleteSequence {
 
@@ -154,7 +153,7 @@
 
         private func write(_ string: Swift.String) throws(Console.Input.Error) {
             do throws(Kernel.IO.Write.Error) {
-                try stream.write(string.utf8.map(Byte.init))
+                try stream.write(string.utf8.map(Byte.init(bitPattern:)))
             } catch {
                 throw .write(error)
             }
