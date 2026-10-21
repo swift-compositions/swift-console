@@ -95,9 +95,8 @@ extension ECMA_48.SGR.Color {
 
             if p.rawValue < 8 {
                 return ["\(30 + p.rawValue)"]
-            } else {
-                return ["\(90 + p.rawValue - 8)"]
             }
+            return ["\(90 + p.rawValue - 8)"]
 
         case .extended(let index):
             guard capability >= .palette8 else {
@@ -116,9 +115,8 @@ extension ECMA_48.SGR.Color {
                 let index = rgbTo16(r: r, g: g, b: b)
                 if index < 8 {
                     return ["\(30 + index)"]
-                } else {
-                    return ["\(90 + index - 8)"]
                 }
+                return ["\(90 + index - 8)"]
             }
             return ["38", "2", "\(r)", "\(g)", "\(b)"]
         }
@@ -129,9 +127,8 @@ extension ECMA_48.SGR.Color {
         case .palette(let p):
             if p.rawValue < 8 {
                 return ["\(40 + p.rawValue)"]
-            } else {
-                return ["\(100 + p.rawValue - 8)"]
             }
+            return ["\(100 + p.rawValue - 8)"]
 
         case .extended(let index):
             guard capability >= .palette8 else {
@@ -148,9 +145,8 @@ extension ECMA_48.SGR.Color {
                 let index = rgbTo16(r: r, g: g, b: b)
                 if index < 8 {
                     return ["\(40 + index)"]
-                } else {
-                    return ["\(100 + index - 8)"]
                 }
+                return ["\(100 + index - 8)"]
             }
             return ["48", "2", "\(r)", "\(g)", "\(b)"]
         }
