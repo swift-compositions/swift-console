@@ -18,7 +18,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swift-compositions/swift-kernel.git", branch: "main"),
+        .package(url: "https://github.com/swift-compositions/swift-kernel.git", branch: "main", traits: ["KernelTerminal"]),
         .package(url: "https://github.com/swift-ecma/swift-ecma-48.git", branch: "main"),
         .package(
             url: "https://github.com/swift-atoms/swift-standard-library-extensions.git",
