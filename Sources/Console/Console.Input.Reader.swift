@@ -107,7 +107,7 @@
                     alignment: 1
                 ) { rawBuffer throws(Kernel.IO.Read.Error) -> Int in
                     let n = try unsafe stream.read(into: rawBuffer)
-                    guard n > 0, let base = unsafe rawBuffer.baseAddress else { return n }
+                    guard n > 0, let base = rawBuffer.baseAddress else { return n }
                     let typed = unsafe UnsafeBufferPointer(
                         start: base.assumingMemoryBound(to: Byte.self),
                         count: n
