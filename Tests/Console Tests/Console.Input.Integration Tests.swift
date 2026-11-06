@@ -3,14 +3,16 @@ import Testing
 
 @testable import Console
 
-extension Console.Input {
+enum `Console.Input Tests` {}
+
+extension `Console.Input Tests` {
     @Suite
     struct Test {
         @Suite struct Integration {}
     }
 }
 
-extension Console.Input.Test.Integration {
+extension `Console.Input Tests`.Test.Integration {
     @Test
     func `Single ASCII character produces key event`() throws {
         let bytes: [Byte] = ([0x61] as [UInt8]).map(Byte.init(bitPattern:))

@@ -2,7 +2,9 @@ import Testing
 
 @testable import Console
 
-extension Console.Capability {
+enum `Console.Capability Tests` {}
+
+extension `Console.Capability Tests` {
     @Suite
     struct Test {
 
@@ -30,7 +32,9 @@ extension Console.Capability {
     }
 }
 
-extension Console.Style {
+enum `Console.Style Tests` {}
+
+extension `Console.Style Tests` {
     @Suite
     struct Test {
 
@@ -73,7 +77,9 @@ extension Console.Style {
     }
 }
 
-extension ECMA_48.SGR.Color {
+enum `ECMA_48.SGR.Color Tests` {}
+
+extension `ECMA_48.SGR.Color Tests` {
     @Suite
     struct Test {
 

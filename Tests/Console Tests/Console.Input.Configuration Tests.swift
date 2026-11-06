@@ -2,7 +2,9 @@ import Testing
 
 @testable import Console
 
-extension Console.Input.Configuration {
+enum `Console.Input.Configuration Tests` {}
+
+extension `Console.Input.Configuration Tests` {
     @Suite
     struct Test {
         @Suite struct Unit {}
@@ -10,7 +12,7 @@ extension Console.Input.Configuration {
     }
 }
 
-extension Console.Input.Configuration.Test.Unit {
+extension `Console.Input.Configuration Tests`.Test.Unit {
     @Test
     func `Default enables paste only`() {
         let config = Console.Input.Configuration.default
@@ -44,7 +46,7 @@ extension Console.Input.Configuration.Test.Unit {
     }
 }
 
-extension Console.Input.Configuration.Test.`Edge Case` {
+extension `Console.Input.Configuration Tests`.Test.`Edge Case` {
     @Test
     func `Properties are independently mutable`() {
         var config = Console.Input.Configuration.default

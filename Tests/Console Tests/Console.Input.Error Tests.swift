@@ -2,7 +2,9 @@ import Testing
 
 @testable import Console
 
-extension Console.Input.Error {
+enum `Console.Input.Error Tests` {}
+
+extension `Console.Input.Error Tests` {
     @Suite
     struct Test {
         @Suite struct Unit {}
@@ -10,7 +12,7 @@ extension Console.Input.Error {
     }
 }
 
-extension Console.Input.Error.Test.Unit {
+extension `Console.Input.Error Tests`.Test.Unit {
     @Test
     func `Terminal case wraps Terminal.Error`() {
         let underlying = Terminal.Error(
@@ -88,7 +90,7 @@ extension Console.Input.Error.Test.Unit {
     #endif
 }
 
-extension Console.Input.Error.Test.`Edge Case` {
+extension `Console.Input.Error Tests`.Test.`Edge Case` {
     @Test
     func `All four cases are distinct`() {
         let terminal = Console.Input.Error.terminal(
