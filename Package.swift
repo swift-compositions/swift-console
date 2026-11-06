@@ -56,7 +56,7 @@ let package = Package(
         .testTarget(
             name: "Console Tests",
             dependencies: [
-                "Console",
+                .target(name: "Console"),
                 .product(name: "Byte", package: "swift-byte"),
             ]
         ),
